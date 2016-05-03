@@ -1,5 +1,5 @@
 # Borsa delle Idee (BiD)
-
+#le cartelle VENDOR IMG FONT DIST COMPONENT BOOTSTRAP .BP-CONFIG  NON LE HO CARICATE PERCHè NON LE HO PROPRIO MODIFICATE ( E NON ME LE FA CARICARE PERCHè DICE SONO TROPPI FILE  )
 "Borsa delle Idee" è un progetto realizzato da un gruppo di studenti di Ingegneria Informatica dell'Università degli Studi di Napoli Federico II, sotto la guida del prof. Paolo Maresca.
 
 L'obiettivo principale del portale è quello di mettere in contatto domanda e offerta di "know-how" di qualunque tipo, rendendo più semplice la realizzazione di ogni tipo di idea.
