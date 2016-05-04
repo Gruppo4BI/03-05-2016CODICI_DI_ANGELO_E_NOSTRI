@@ -41,7 +41,7 @@ $mysqli = $db->getConnection();
 										<div class="form-group">
 											 <label class="sr-only" for="Password">Password</label>
 											 <input type="password" class="form-control" name="password" placeholder="Password" required>
-                                             <div class="help-block text-right"><a href="">Hai dimenticato la password?</a></div>
+                                             <div class="help-block text-right"><a href="forgot.php">Hai dimenticato la password?</a></div>
 										</div>
 										<div class="form-group">
 											 <button type="submit" name="login" class="btn btn-primary btn-block">Login</button>
@@ -86,7 +86,7 @@ $mysqli = $db->getConnection();
   </div><!-- /.container-fluid -->
 </nav>
 <?php
-//per settare l'id dopo che è stata inviata la mail all'azienda 
+//per settare l'id dopo che Ã¨ stata inviata la mail all'azienda 
 if( isset($_GET['id']) )
 {
 	$slq= "SELECT EMAIL,CODICE_ATTIVAZIONE FROM utenti WHERE CODICE_ATTIVAZIONE='".$_GET['id']."';";
