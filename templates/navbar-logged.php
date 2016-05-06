@@ -24,9 +24,17 @@ defined('INCLUDING') or die('Restricted access');
     	<ul class="nav navbar-nav navbar-right hidden-xs">
         <li class="dropdown">
 	        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"> <span class="caret"></span></a>
-	        <ul class="dropdown-menu">
-	            <li><a href='profile.php?id=<?php echo $_SESSION['loggeduser']->getid()."'>".$_SESSION['loggeduser']->who();?></a></li>
-	            <li><a href="settings.php">Impostazioni</a></li>
+	         <ul class="dropdown-menu">
+	            <li><a <?php if($_SESSION['loggeduser']->isPersona())
+	            			echo "href='profile.php?id='".$_SESSION['loggeduser']->getid()."'>".$_SESSION['loggeduser']->who()."</a></li>";
+	            	  	  else 
+	            	  		echo "href='Menu.php?id='".$_SESSION['loggeduser']->getid()."'>".$_SESSION['loggeduser']->who()."</a></li>";
+	            		?>
+	            <li><a <?php if($_SESSION['loggeduser']->isPersona())
+	            				echo 'href="settings.php">Impostazioni</a></li>';
+	            			else 
+	            				echo 'href="settingsAzienda.php">Impostazioni</a></li>';
+	            			?>
 	            <li role="separator" class="divider"></li>
 	            <li><a href="logout.php">Logout</a></li>
 	        </ul>
