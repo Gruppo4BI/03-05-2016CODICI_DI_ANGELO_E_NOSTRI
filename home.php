@@ -54,6 +54,27 @@ include_once(METHODS_PATH . '/azienda.class.php');
 </div>	
  	
 </div> 	
+<?php
+//per settare l'id dopo che è stata inviata la mail all'azienda 
+if( isset($_GET['id']) )
+{
+	$slq= "SELECT EMAIL,CODICE_ATTIVAZIONE FROM utenti WHERE CODICE_ATTIVAZIONE='".$_GET['id']."';";
+	$result = $mysqli->query($slq);
+	$RIGA = $result->fetch_assoc();
+	switch ($_GET['id'])
+	{
+		 
+
+		case $RIGA['CODICE_ATTIVAZIONE']:
+			$comandoSQL="update utenti set ATTIVO='1' where EMAIL='".$RIGA['EMAIL']."';";
+			$q = $mysqli->query($comandoSQL);
+			$mysqli->close();
+			//$result=mysqli_query($conn,$comandoSQL);
+			break;
+			 
+	}
+}
+?>
  <?php include (TEMPLATES_PATH.'/footer.php');?>	
 </body>
 
